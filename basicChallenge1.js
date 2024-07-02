@@ -112,14 +112,16 @@ function reverseString(str) {
   let length = temp.length - 1;
 
   let arr = [];
-  let revStr;
+  let revStr = "";
 
   for (let i = length; i >= 0; i--) {
-    arr.push(temp[i]);
+    arr.push(str[i]);
+    revStr += str[i];
   }
 
   console.log("\nOriginal String = ", temp);
-  console.log("Reverse String = ", arr.join(""));
+  console.log("Array Reverse String = ", arr.join(""));
+  console.log("Reverse String = ", revStr);
 }
 
-reverseString("Hello");
+reverseString("hello");
