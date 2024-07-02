@@ -105,7 +105,7 @@ function titleCase(stringData) {
 
 titleCase("the quick brown fox jump over the lazy dog");
 
-// Reverse String Challenge 1
+// Reverse and Pallindrom String Challenge 1
 
 function reverseString(str) {
   let temp = str;
@@ -122,6 +122,30 @@ function reverseString(str) {
   console.log("\nOriginal String = ", temp);
   console.log("Array Reverse String = ", arr.join(""));
   console.log("Reverse String = ", revStr);
+
+  if (temp.toLowerCase() === revStr.toLowerCase()) {
+    console.log("Entered String is Palindrome !! ");
+  } else {
+    console.log("Entered String is not Palindrome !! ");
+  }
 }
 
 reverseString("hello");
+reverseString("naman");
+
+// Count Vowels Challenge 1
+
+function countVowels(stringValue) {
+  let temp = stringValue;
+  let count = 0;
+
+  for (let k of temp.toLowerCase()) {
+    if (k == "a" || k == "e" || k == "i" || k == "o" || k == "u") {
+      count += 1;
+    }
+  }
+  console.log("Count Vowels = ", count);
+}
+
+countVowels("I am Darshan, Full Stack Developer");
+countVowels("JavaScript");
