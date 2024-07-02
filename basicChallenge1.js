@@ -90,4 +90,36 @@ snake_case  -> array_data  (python, ruby)
 PascalCase  -> ArrayData   (c++, java)
 */
 
-function titleCase() {}
+function titleCase(stringData) {
+  let temp = stringData;
+  let stringVal = stringData.toLowerCase().split(" ");
+
+  for (let i = 0; i < stringVal.length; i++) {
+    stringVal[i] = stringVal[i][0].toUpperCase() + stringVal[i].slice(1);
+  }
+
+  let newStr = stringVal.join(" ");
+  console.log("og String = ", temp);
+  console.log("new string =", newStr);
+}
+
+titleCase("the quick brown fox jump over the lazy dog");
+
+// Reverse String Challenge 1
+
+function reverseString(str) {
+  let temp = str;
+  let length = temp.length - 1;
+
+  let arr = [];
+  let revStr;
+
+  for (let i = length; i >= 0; i--) {
+    arr.push(temp[i]);
+  }
+
+  console.log("\nOriginal String = ", temp);
+  console.log("Reverse String = ", arr.join(""));
+}
+
+reverseString("Hello");
