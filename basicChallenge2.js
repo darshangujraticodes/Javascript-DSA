@@ -79,8 +79,8 @@ function missingLetter(arrayLetters) {
   let splitVal = alphabets.split("");
   // console.log(splitVal);
 
-  let startLetterPosition = 1;
-  let endLetterPosition = 1;
+  let startLetterPosition = 25;
+  let endLetterPosition = 0;
 
   for (let i of arrayLetters) {
     // console.log(i, splitVal.indexOf(i));
@@ -100,7 +100,7 @@ function missingLetter(arrayLetters) {
     }
   }
   console.log(missingArray);
-  // console.log(startLetterPosition, endLetterPosition);
+  console.log(startLetterPosition, endLetterPosition);
 }
 
-missingLetter(["b", "c", "f", "l", "a"]);
+missingLetter(["l", "z", "u"]);
