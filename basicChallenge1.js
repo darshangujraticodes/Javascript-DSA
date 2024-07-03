@@ -37,7 +37,7 @@ function calculator(num1, num2, opr) {
   }
 }
 
-// console.log("add = ", calculator(8, 2, "+"));
+console.log("add = ", calculator(8, 2, "+"));
 // console.log("subtract = ", calculator(8, 2, "-"));
 // console.log("multiply = ", calculator(8, 2, "*"));
 // console.log("divide = ", calculator(8, 2, "/"));
