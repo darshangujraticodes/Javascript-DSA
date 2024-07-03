@@ -43,23 +43,64 @@ arrayIntersection([1, 2, 4, 5, 6], [5, 6, 8, 9, 10, 15]);
 function findMissingValue(arrayValue) {
   let temp = arrayValue;
   let maxVal = arrayValue[0];
-  let missingValue;
+  let minVal = arrayValue[0];
+  let missingVal = [];
 
   for (let k of arrayValue) {
     if (maxVal < k) {
       maxVal = k;
     }
+    if (minVal > k) {
+      minVal = k;
+    }
   }
   // console.log("Array max value  = ", maxVal);
 
-  for (let i = maxVal; i > 0; i--) {
+  for (let i = minVal; i <= maxVal; i++) {
     if (!arrayValue.includes(i)) {
-      missingValue = i;
+      missingVal.push(i);
     }
   }
-  console.log("Array value  = ", arrayValue);
+  console.log("Array value  = ", arrayValue, maxVal, minVal);
 
-  console.log("Array missing value  = ", missingValue);
+  console.log("Array missing value  = ", missingVal);
 }
 
-findMissingValue([1, 2, 3, 4, 9, 6, 7, 5]);
+findMissingValue([11, 12, 13, 14, 19, 16, 17, 5]);
+
+// find missing letter
+
+let alphabets = "abcdefghijklmnopqrstuvwxyz";
+
+function missingLetter(arrayLetters) {
+  let temp = arrayLetters;
+  let missingArray = [];
+
+  let splitVal = alphabets.split("");
+  // console.log(splitVal);
+
+  let startLetterPosition = 1;
+  let endLetterPosition = 1;
+
+  for (let i of arrayLetters) {
+    // console.log(i, splitVal.indexOf(i));
+
+    if (startLetterPosition > splitVal.indexOf(i)) {
+      startLetterPosition = splitVal.indexOf(i);
+    }
+
+    if (endLetterPosition < splitVal.indexOf(i)) {
+      endLetterPosition = splitVal.indexOf(i);
+    }
+  }
+
+  for (let i = startLetterPosition; i <= endLetterPosition; i++) {
+    if (!arrayLetters.includes(splitVal[i])) {
+      missingArray.push(splitVal[i]);
+    }
+  }
+  console.log(missingArray);
+  // console.log(startLetterPosition, endLetterPosition);
+}
+
+missingLetter(["b", "c", "f", "l", "a"]);
