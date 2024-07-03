@@ -149,3 +149,21 @@ function countVowels(stringValue) {
 
 countVowels("I am Darshan, Full Stack Developer");
 countVowels("JavaScript");
+
+// Remove Duplicate letter of  Challenge 1
+
+function removeDuplicate(arrayValue) {
+  let temp = arrayValue;
+  let arr = [];
+
+  for (let i of temp) {
+    if (!arr.includes(i)) {
+      arr.push(i);
+    }
+  }
+  console.log(arr);
+}
+
+removeDuplicate([
+  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 8, 5, 5, 9, 4, 5, 6, 8, 5,
+]);
