@@ -31,6 +31,9 @@ class LinkedList {
 }
 
 let linkedList = new LinkedList(5);
+linkedList.push(45);
+linkedList.push(56);
+// linkedList.push(86);
 
 console.log(linkedList);
 // push(56);
